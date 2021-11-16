@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="imgN1">
+    <file>img/chave.png</file>
+    <file>img/2°tela.jpg</file>
+    <file>img/imgTela1.png</file>
+    <file>img/login.png</file>
+    <file>img/n1.png</file>
+    <file>img/n2.jpg</file>
+    <file>img/n3.jpg</file>
+    <file>img/padlock.png</file>
+    <file>img/telacad.png</file>
+  </qresource>
+</RCC>
