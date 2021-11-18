@@ -2,7 +2,8 @@ import sqlite3
 from sqlite3 import Error
 
 class banco_db:
-    def __init__(self,banco= None):
+
+    def __init__(self,banco =None):
         self.conn = None
         self.cursor = None
 
@@ -20,14 +21,25 @@ class banco_db:
     def criar_tabela(self):#cria tabela, se ja tiver a tabela ela ignora esse comando
         cur = self.cursor
         cur.execute("""
-        CREATE TABLE IF NOT EXISTS cadastro (
-        Id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+        CREATE TABLE cadastro (
         nome TEXT NOT NULL,
         login TEXT NOT NULL,
         senha TEXT NOT NULL,
-        nivel INTEGER NOT NULL 
-        );""")
+        nivel INTEGER NOT NULL,
+        Id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT);""")
 
-db = banco_db("cadastro.db")
+    def inserir_dados(self,query):
+        cur = self.cursor
+        cur.execute(query)
+        self.conn.commit()
+        
 
-db.criar_tabela()
+
+    def pegar_dados(self,query):
+        cur = self.cursor
+        cur.execute(query)
+        return cur.fetchall
+
+
+#db = banco_db("cadastro.db")
+#db.criar_tabela()

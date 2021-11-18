@@ -3,7 +3,6 @@ from PyQt5.QtWidgets import QDialog, QApplication
 
 from modulos.login import login
 
-
 app = QApplication(sys.argv)
 if (QDialog.Accepted == True):
     window = login()
