@@ -40,6 +40,11 @@ class banco_db:
         cur.execute(query)
         return cur.fetchall
 
+    def pegarNivel(self,query):
+        cur = self.cursor
+        cur.execute(query)
+        
+        
 
 #db = banco_db("cadastro.db")
 #db.criar_tabela()

@@ -80,7 +80,7 @@ class nivel1(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt;\">    </span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt;\">    Com a demanda da expanção houve um aumento na frota dos maquinarios, na divisão agro possuem 30 colheitadeiras axial, 15 tratores, 15 plantadeiras de 24 linhase mais de 21 autopropelidos.</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14pt;\"><br /></p></body></html>"))
-import imgN1
+import template.imgN1
 
 if __name__ == "__main__":
     import sys

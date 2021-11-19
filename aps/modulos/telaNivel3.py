@@ -7,17 +7,17 @@ from PyQt5.QtGui import QIcon, QPixmap
 from PyQt5.QtPrintSupport import *
 import os,sys
 
-from template.nivel1 import nivel1
+from template.nivel3 import nivel3
 from modulos.login import login
 
-
-class tela_1(QMainWindow):
+class tela_3(QMainWindow):
     def __init__(self,*args,**argvs):
-        super(tela_1,self).__init__(*args,**argvs)
-        self.ui = nivel1()
+        super(tela_3,self).__init__(*args,**argvs)
+        self.ui = nivel3()
         self.ui.setupUi(self) 
-        self.ui.voltaN1.clicked.connect(self.voltaLogin)
+        self.ui.voltaN3.clicked.connect(self.voltaLogin)
 
     def voltaLogin(self):
         voltaLogin = login()
         voltaLogin.exec_()
+
