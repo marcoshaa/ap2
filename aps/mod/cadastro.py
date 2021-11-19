@@ -20,6 +20,8 @@ class cadastrar(QDialog):
         self.ui.setupUi(self) 
         self.ui.pushButton_4.clicked.connect(self.cadNovo)
     
+#____________________VAI NO BANCO E REALIZA A INTRODUÇÃO DOS DADOS________________________#
+
     def cadNovo(self):
         db = banco_db("cadastro.db")
 
@@ -28,6 +30,7 @@ class cadastrar(QDialog):
         Tsenha = self.ui.lineEdit_2.text()
         Tnivel = self.ui.lineEdit_4.text()
        
+#________________________BLOCO DE REPEDIÇÃO CASO HAJA FALTA DE DADOS___________________#
 
         if Tlogin == "" or Tsenha =="" or Tnome =="" or Tnivel=="":
             QMessageBox.information(QMessageBox(),"ERRO NO CADASTRO", "PREENCHA OS CAMPOS CORRETAMENTE!!")

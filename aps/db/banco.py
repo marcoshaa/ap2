@@ -18,6 +18,8 @@ class banco_db:
         except sqlite3.Error as e:
             print("Conexão nao Estabelecida")
 
+#__________________CRIA O BANCO CASO NAO TENHA NO PROJETO________________#
+
     def criar_tabela(self):#cria tabela, se ja tiver a tabela ela ignora esse comando
         cur = self.cursor
         cur.execute("""
@@ -28,23 +30,27 @@ class banco_db:
         nivel INTEGER NOT NULL,
         Id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT);""")
 
+#__________________FUNÇÃO CRIADA PARA FAZER INSERT INTO NO BANCO_______________#
+
     def inserir_dados(self,query):
         cur = self.cursor
         cur.execute(query)
         self.conn.commit()
         
-
+#_____________________FUNÇÃO CRIADA PARA FAZER SELECT NO BANCO____________________#
 
     def pegar_dados(self,query):
         cur = self.cursor
         cur.execute(query)
         return cur.fetchall
 
+#_______________________FUNÇÃO CRIADA PARA PEGAR APENAS O CAMPO NIVEL DO BANCO____________#
+
     def pegarNivel(self,query):
         cur = self.cursor
         cur.execute(query)
         
-        
+#___________DESCOMENTE E EXECUTE O COD. PARA GERAR MAIS BANCOS CASO QUEIRA_____________________________#  
 
-#db = banco_db("cadastro.db")
+#db = banco_db("X.db") #SUBISTITUIR O X PELO NOME DO NOVA BANCO.
 #db.criar_tabela()
